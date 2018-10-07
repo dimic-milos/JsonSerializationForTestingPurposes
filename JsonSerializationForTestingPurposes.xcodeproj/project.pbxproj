@@ -13,6 +13,8 @@
 		748DF1AF216A3FC80098276E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 748DF1AE216A3FC80098276E /* Assets.xcassets */; };
 		748DF1B2216A3FC80098276E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 748DF1B0216A3FC80098276E /* LaunchScreen.storyboard */; };
 		748DF1BD216A3FC80098276E /* JsonSerializationForTestingPurposesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748DF1BC216A3FC80098276E /* JsonSerializationForTestingPurposesTests.swift */; };
+		748DF1C8216A42B00098276E /* BarChartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748DF1C7216A42B00098276E /* BarChartItem.swift */; };
+		748DF1CA216A43630098276E /* BarChartItemJson.txt in Resources */ = {isa = PBXBuildFile; fileRef = 748DF1C9216A43620098276E /* BarChartItemJson.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		748DF1B8216A3FC80098276E /* JsonSerializationForTestingPurposesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JsonSerializationForTestingPurposesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		748DF1BC216A3FC80098276E /* JsonSerializationForTestingPurposesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonSerializationForTestingPurposesTests.swift; sourceTree = "<group>"; };
 		748DF1BE216A3FC80098276E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		748DF1C7216A42B00098276E /* BarChartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartItem.swift; sourceTree = "<group>"; };
+		748DF1C9216A43620098276E /* BarChartItemJson.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BarChartItemJson.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			children = (
 				748DF1A7216A3FC60098276E /* AppDelegate.swift */,
 				748DF1A9216A3FC60098276E /* ViewController.swift */,
+				748DF1C7216A42B00098276E /* BarChartItem.swift */,
+				748DF1C9216A43620098276E /* BarChartItemJson.txt */,
 				748DF1AB216A3FC60098276E /* Main.storyboard */,
 				748DF1AE216A3FC80098276E /* Assets.xcassets */,
 				748DF1B0216A3FC80098276E /* LaunchScreen.storyboard */,
@@ -179,6 +185,7 @@
 			files = (
 				748DF1B2216A3FC80098276E /* LaunchScreen.storyboard in Resources */,
 				748DF1AF216A3FC80098276E /* Assets.xcassets in Resources */,
+				748DF1CA216A43630098276E /* BarChartItemJson.txt in Resources */,
 				748DF1AD216A3FC60098276E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				748DF1AA216A3FC60098276E /* ViewController.swift in Sources */,
+				748DF1C8216A42B00098276E /* BarChartItem.swift in Sources */,
 				748DF1A8216A3FC60098276E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
