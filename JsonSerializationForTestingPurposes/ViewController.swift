@@ -22,9 +22,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         print("START")
-        print(barChartItemFastWay?.value ?? "", barChartItemFastWay?.normTime ?? "")
-        print(barChartItemTheRightWay?.value ?? "", barChartItemTheRightWay?.normTime ?? "")
-        print(barChartItemTheBestWay?.value ?? "")
+        print(barChartItemFastWay?.value ?? "", barChartItemFastWay?.normTime ?? "", barChartItemFastWay?.legal?.first?.contractNumber ?? "", barChartItemFastWay?.legal?.first?.agreed ?? "")
+        print(barChartItemTheRightWay?.value ?? "", barChartItemTheRightWay?.normTime ?? "", barChartItemTheRightWay?.legal?.first?.contractNumber ?? "", barChartItemTheRightWay?.legal?.first?.agreed ?? "")
+        print(barChartItemTheBestWay?.value ?? "", barChartItemTheBestWay?.normTime ?? "", barChartItemTheBestWay?.legal?.first?.contractNumber ?? "", barChartItemTheBestWay?.legal?.first?.agreed ?? "")
         print("END")
     }
     
@@ -52,7 +52,8 @@ class ViewController: UIViewController {
     }
     
     private func getBarChartItemTheBestWay() -> BarChartItem? {
-       return try? BarChartItem.create(with: BarChartItem.Test.init(value: 1.2345))
+        let legal = Legal(agreed: true, contractNumber: 33)
+        return try? BarChartItem.create(with: BarChartItem.Test.init(value: 0.7, normTime: 0.8, legal: [legal]))
     }
 }
 
@@ -74,12 +75,14 @@ extension BarChartItem {
         
         let value: Double?
         let normTime: Double?
+        var legal: [Legal]?
         
         // MARK: Init
         
-        init(value: Double? = nil, normTime: Double? = nil) {
+        init(value: Double? = nil, normTime: Double? = nil, legal: [Legal]? = nil) {
             self.value = value
             self.normTime = normTime
+            self.legal = legal
         }
         
         // MARK: Public methods
@@ -88,13 +91,15 @@ extension BarChartItem {
             var container = encoder.container(keyedBy: CodingKeys.self)
             try container.encode(value, forKey: .value)
             try container.encode(normTime, forKey: .normTime)
+            try container.encode(legal, forKey: .legal)
         }
         
         // MARK: Codable
         
-        enum CodingKeys: CodingKey {
+        enum CodingKeys: String, CodingKey {
+            case normTime = "norm_time"
             case value
-            case normTime
+            case legal = "legal_info"
         }
     }
 }

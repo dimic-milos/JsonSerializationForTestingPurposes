@@ -1,4 +1,8 @@
 {
 "value" : 1744.2,
-"norm_time" : 131.44
+"norm_time" : 131.44,
+"legal_info" : [{
+                "contractNumber" : 22,
+                "agreed" : true
+                }]
 }
